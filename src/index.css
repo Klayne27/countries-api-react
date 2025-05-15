@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%; /* Ensure they take full height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  /* Set the background color to match your dark theme */
+  background-color: #1f2937; /* This is the color code for Tailwind's gray-800 */
+  color: #d1d5db; /* Optional: Set default text color for consistency */
+}
+
