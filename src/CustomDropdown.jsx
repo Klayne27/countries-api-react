@@ -15,7 +15,7 @@ function CustomDropdown({
   const dispatch = useDispatch();
 
   const isOpen = openDropdown === id;
-  const dropDownRef = useRef(null)
+  const dropDownRef = useRef(null);
 
   const selectedOption = options.find((option) => option.value === value);
 
@@ -47,13 +47,13 @@ function CustomDropdown({
   };
 
   return (
-    <div className="shadow-md" ref={dropDownRef}>
+    <div ref={dropDownRef}>
       <div
         onClick={() => dispatch(handleToggleDropdown(id))}
-        className={`transition-colors flex justify-between w-[210px] cursor-pointer relative text-black dark:text-white rounded-md py-4 px-6 bg-white dark:bg-[#2b3945] hover:opacity-80`}
+        className={`mt-5 md:mt-0 transition-colors flex justify-between w-[210px] cursor-pointer relative text-black dark:text-white rounded-md py-4 px-6 bg-white dark:bg-[#2b3945] shadow-md hover:opacity-80`}
       >
         {" "}
-        <span>{displayText}</span>
+        <span className="md:text-base text-sm">{displayText}</span>
         <svg
           className={`w-4 h-4 transform`}
           fill="none"
@@ -75,7 +75,7 @@ function CustomDropdown({
             <li
               key={option.name}
               onClick={() => handleSelect(option.value)}
-              className="transition-colors text-black dark:text-white cursor-pointer px-6 py-1.5 hover:bg-[#f0f0f0]  dark:hover:bg-[#202c37]"
+              className="transition-colors text-black dark:text-white cursor-pointer px-6 py-1.5 hover:bg-[#f0f0f0]  dark:hover:bg-[#202c37] md:text-base text-sm"
             >
               {option.name}
             </li>

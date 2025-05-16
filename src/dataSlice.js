@@ -16,7 +16,7 @@ const dataSlice = createSlice({
     },
     setSelectedRegion(state, action) {
       state.selectedRegion = action.payload;
-      state.isRegionInteracted = true
+      state.isRegionInteracted = true;
     },
     handleToggleDropdown(state, action) {
       state.openDropdown = state.openDropdown === action.payload ? null : action.payload;

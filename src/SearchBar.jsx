@@ -11,11 +11,11 @@ function SearchBar() {
   };
 
   return (
-    <div className="flex items-center rounded-md bg-white  dark:bg-[#2b3945] mb-7 shadow-md transition-colors">
+    <div className="flex items-center rounded-md bg-white mt-25 md:mt-0 dark:bg-[#2b3945] mb-7 shadow-md transition-colors">
       <FaMagnifyingGlass className="text-[#111517] dark:text-white ml-8 transition-colors" />
 
       <input
-        className="dark:bg-[#2b3945] bg-white px-6 py-4 rounded-md w-[420px] text- flex-grow  border-none focus:outline-none transition-colors placeholder-[#111517] dark:placeholder-gray-400 text-gray-200 shadow-"
+        className="dark:bg-[#2b3945] bg-white px-6 py-4 rounded-md w-[420px] flex-grow border-none focus:outline-none transition-colors placeholder-[#111517] dark:placeholder-gray-400 text-gray-200"
         value={searchTerm}
         onChange={handleSetSearchTerm}
         placeholder="Search for a country..."
