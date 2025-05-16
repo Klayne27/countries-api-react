@@ -7,10 +7,11 @@ import { CiLight } from "react-icons/ci";
 function Header() {
   const { mode } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-  console.log(mode);
 
   return (
-    <div className="px-4 py-6 md:px-46 md:py-5 flex justify-between items-center bg-white  dark:bg-[#2b3945] fixed w-full z-11 shadow-md transition-colors">
+    <div
+      className={`px-4 py-6 md:px-46 md:py-5 flex justify-between items-center bg-white  dark:bg-[#2b3945] w-full z-11 shadow-md transition-colors fixed`}
+    >
       <Link to="/">
         <h1 className="font-bold text-sm md:text-xl text-black dark:text-white transition-colors">
           Where in the world?

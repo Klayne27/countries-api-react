@@ -1,4 +1,4 @@
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import CountryList from "./CountryList";
 import CountryDetail from "./CountryDetail";
@@ -6,20 +6,19 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 function App() {
-
-  const {mode} = useSelector(state => state.theme)
+  const { mode } = useSelector((state) => state.theme);
 
   useEffect(() => {
-    const htmlElement = document.documentElement
+    const htmlElement = document.documentElement;
 
-    if(mode === 'dark') {
-      htmlElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
+    if (mode === "dark") {
+      htmlElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      htmlElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
+      htmlElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  }, [mode])
+  }, [mode]);
 
   return (
     <div>
